@@ -552,38 +552,30 @@ btnPlay.addEventListener("click", () => {
 });
 
 function saveState() {
-    // Salva o estado atual do canvas na pilha de desfazer
     undoList.push(ctx.getImageData(0, 0, Canvas.width, Canvas.height));
     
-    // Se o histórico passar do limite, remove o mais antigo
     if (undoList.length > maxHistoryc) {
         undoList.shift();
     }
     
-    // Sempre que o usuário faz um NOVO traço, a lista de refazer precisa ser limpa
     redoList = [];
 }
 
 function Undo() {
     if (undoList.length > 0) {
-        // Guarda o estado atual na lista de refazer antes de voltar
         redoList.push(ctx.getImageData(0, 0, Canvas.width, Canvas.height));
 
         
-        // Desenha o estado anterior de volta no Canvas
         ctx.putImageData(undoList.pop(), 0, 0);
     }
 }
 
 function Redo() {
     if (redoList.length > 0) {
-        // Guarda o estado atual de volta no desfazer
         undoList.push(ctx.getImageData(0, 0, Canvas.width, Canvas.height));
         
-        // Pega o estado da lista de refazer
         let proximoEstado = redoList.pop();
         
-        // Desenha na tela
         ctx.putImageData(proximoEstado, 0, 0);
     }
 }
