@@ -1,0 +1,32 @@
+#PincherStudioIcons #PincherStudioIcon {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 0.3%;
+    left: 0.3%;
+}
+
+#PincherStudioIcons #NWJSoftwareLabsIcon {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 0.3%;
+    right: 0.3%;
+}
+
+
+#OptionsMenu {
+    background-color: transparent;
+    display: grid;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    top: 10%;
+}
+
+#OptionsMenu img {
+    width: 25px;
+    height: 25px;
+}

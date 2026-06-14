@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincher Painting - painting maker</title>
+    <link href="./PincherPainting.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pincher Painting Logo.png">
+</head>
+<body style="background: rgb(33, 235, 191); margin: 0; padding: 0; min-height: 100vh; width: 100vw; position: relative; overflow: hidden;">
+
+    <div id="MainMenu" style="display: none;">
+        <div id="PincherAnimIcon">
+            <a title="Voltar ao Início" id="PincherAnimIcon_button" href="../../../index.html">
+                <img id="PincherAnimIcon" src="./Pincher Painting Logo.png">
+            </a>
+        </div>
+
+        <div id="Canvasdiv">
+            <canvas id="Canvas" width="758" height="540"></canvas>
+        </div>
+
+        <div id="Toolbar">
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Pincel" id="pencil">
+                <img src="PincherPainting -  pencil icon.png">
+            </button>
+
+            <dialog id="selectForm">
+                <button id="closeFormsMenu" title="Fechar">close</button>
+                <br>
+                <h1>Formas: </h1>
+                <br>
+                <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Circulo" id="circleBtn">
+                    <img src="Pincher Painting - CircleFormIcon.png">
+                </button>
+                <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Triângulo" id="triangleBtn">
+                    <img src="Pincher Painting - TriangleFormIcon.png">
+                </button>
+                <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Quadrado/Retangulo" id="squareBtn">
+                    <img src="Pincher Painting - SquareFormIcon.png">
+                </button>
+                <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Linha" id="lineBtn">
+                    <img src="Pincher Painting - LineFormIcon.png">
+                </button>
+            </dialog>
+            
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Borracha" id="rubber">
+                <img src="PincherPainting - rubber icon.png">
+            </button>
+            <button id="forms" style="height: 5vh; width: 30px; background-color: transparent; position: relative;">
+                <img src="Pincher Painting - FormsIcon.png">
+            </button>
+
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Texto" id="textBtn">
+                <img src="Pincher Painting - TextIcon.png">
+            </button>
+        
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Configurar" id="config">
+                <img src="PincherPainting - config icon.png">
+            </button>
+
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Desfazer" id="undo">
+                <img src="undo.png">
+            </button>
+            <button style="height: 5vh; width: 30px; background-color: transparent; position: relative;" title="Refazer" id="redo">
+                <img src="redo.png">
+            </button>
+            
+            <dialog id="configOptions">
+                <button id="close">Fechar</button>
+                <h3>Configuração de desenho:</h3>
+                <p>Cor:</p>
+                <input value="#000000" id="colorChooserInput" type="color" style="width: 50px; height: 50px; cursor: pointer;">
+                <p>Tamanho do pincel:</p>
+                <input id="ticknessInput" type="number" value="5" max="100" min="1">
+                <br>
+                <br>
+                <button id="saveAlterations">Salvar</button>
+            </dialog>
+
+            <dialog id="SaveMyPainting">
+                <button id="closeSaveDialog">Voltar</button>
+                <br>
+                <h1>Salvar Minha Pintura</h1>
+                <p>Nome da pintura (sem .png)</p>
+                <br>
+                <input id="archiveName" type="text" value="my painting">
+                <p>Transparente</p>
+                <input id="transparentBox" type="checkbox">
+                <br>
+                <br>
+                <button id="savePaintingBtn">Salvar</button>
+            </dialog>
+            <dialog id="savingAnimation">
+                <video src="Pincher Painting - saving file anim.mp4" autoplay playsinline muted loop style="height: 100%; width: 100%;"></video>
+            </dialog>
+            <dialog id="alertDialog">
+
+            </dialog>
+        </div>
+
+        <div id="Toolbar2">
+            <button style="background-color: transparent; position: relative; font-size: 3vh; border: 0px;" id="remove" title="Apagar tudo">❌</button>
+        </div>
+
+        <div id="tool" style="right: 0%; top: 0%; position: absolute;">
+            <button title="Salvar meu desenho em PNG" id="Export" style="font-size: 20px;">
+                🖼️
+            </button>
+        </div>
+    </div>
+
+    <div id="main_loading" style="display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: white; z-index: 9999;">
+        <video loop autoplay muted playsinline src="../../../assets/Pincher Studio - loading logo.mp4" style="width: 50%; max-width: 250px; height: auto;">
+        </video>
+    </div>
+
+    <script src="./PincherPainting.js"></script>
+</body>
+</html>
