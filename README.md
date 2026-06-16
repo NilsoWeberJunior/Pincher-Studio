@@ -5,6 +5,10 @@ O Pincher Studio é um site onde você pode criar suas animações e pinturas 10
 
 para usar o Pincher Studio basta ir no html inicial (index.html) e você pode clicar em uma das opções que aparecem na barra! (criar animação/criar pintura)
 
-# ⚠️ AVISO DE BETA
+## ⚠️ AVISO DE BETA
 
 o Pincher Studio está em versão beta e não garanto que este site html funcione corretamente durante esta fase.
+
+# Site
+
+você pode ver no site completo em https://nilsoweberjunior.github.io/Pincher-Studio/index.html e começar a fazer suas criações!
