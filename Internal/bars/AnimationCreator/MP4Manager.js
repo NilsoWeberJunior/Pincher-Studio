@@ -30,8 +30,8 @@ export async function exportToMP4(frameList, width, height, archiveName) {
             videoBitsPerSecond: 5000000 
         };
         extensaoFinal = ".mp4";
-    tipoBlob = "video/mp4";
-    console.log("Sucesso: Usando MP4 nativo da Apple!");
+        tipoBlob = "video/mp4";
+        console.log("Sucesso: Usando MP4 nativo da Apple!");
 
     } else {
         opcoes = {

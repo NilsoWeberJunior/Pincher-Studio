@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincher Sequencer - Song Maker</title>
+    <link href="./PincherSequencer.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pincher Sequencer Logo.png">
+</head>
+<body>
+    <div id="PincherSequencerIcon">
+        <a title="Voltar ao Início" id="PincherAnimIcon_button" href="../../../../index.html">
+            <img src="./Pincher Sequencer Logo.png" alt="Logo">
+        </a>
+    </div>
+    <div id="Toolbar">
+        <button id="configBtn">
+            <img src="PincherSequencer - config icon.png">
+        </button>
+    </div>
+    <dialog id="configDialog">
+        <button id="closeConfigDialogBtn">Fechar</button>
+        <h1>Configurações:</h1>
+        <p>batidas por segundo:</p>
+        <input type="number" id="bpmInput" max="128" min="1" value="16">
+        <br>
+        <br>
+        <label style="display: flex; justify-content: space-between; align-items: center;">
+            Volume Geral:
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" style="width: 100px; cursor: pointer;">
+        </label>
+        <br>
+        <br>
+        <button id="saveConfigsBtn">Salvar</button>
+    </dialog>
+    <dialog id="SaveMyAudio">
+            <button id="closeSaveDialog">Voltar</button>
+            <br>
+            <h1>Salvar Meu Áudio</h1>
+            <p>Nome do áudio (sem .wav)</p>
+            <br>
+            <input id="archiveName" type="text" value="my_audio">
+            <br><br>
+            <button id="saveAudioBtn">Salvar</button>
+        </dialog>
+        <dialog id="savingAudio" style="background-color: black;">
+            <video src="PincherSequencer - Saving Audio.mp4" autoplay playsinline muted loop style="height: 100%; width: 100%;"></video>
+        </dialog>
+
+        <dialog id="alertDialog"></dialog>
+
+    <div class="sequencer-container">
+        <div class="grid-sequencer" id="grid">
+            <!-- O JavaScript vai injetar centenas de <button> aqui dentro automaticamente! -->
+        </div>
+    </div>
+    <div id="Toolbar2">
+        <div id="btnPlay">
+
+        </div>
+    </div>
+    <div id="tool">
+        <button title="Salvar meu audio em WAV" id="Export" style="position: absolute; right: 0%; top: 0%;">📊</button>
+    </div>
+
+    <div id="main_loading" style="display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: white; z-index: 9999;">
+        <video loop autoplay muted playsinline src="../../../../assets/Pincher Studio - loading logo.mp4" style="width: 50%; max-width: 250px; height: auto;">
+        </video>
+    </div>
+
+    <script src="./PincherSequencer.js"></script>
+    <script src="./PincherWavExporter.js"></script>
+</body>
+</html>

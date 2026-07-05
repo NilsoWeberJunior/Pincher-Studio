@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincher Audio - Audio Maker</title>
+    <link href="./PincherAudio.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pincher Audio Logo.png">
+</head>
+<body>
+    <div id="PincherAnimIcon">
+        <a title="Voltar ao Início" id="PincherAnimIcon_button" href="../../../../index.html">
+            <img src="./Pincher Audio Logo.png" alt="Logo">
+        </a>
+    </div>
+
+    <div id="Toolbar">
+        <button id="addSound" title="Adicionar som">🔈</button>
+        <dialog id="addSoundDialog">
+            <button id="closeAddSoundDialog">Fechar</button>
+            <br>
+            <h1>Adicione um som que você acha melhor!</h1>
+            <h1>-----------------------------------------------</h1>
+            <p>Efeitos:</p>
+            <button id="explosion">Explosão</button>
+            <p>------------</p>
+            <p>Instrumentos:</p>
+            <button id="cymbal">Prato</button>
+            <button id="hi-hat">Prato Hi-Hat</button>
+            <button id="applause">palma</button>
+            <button id="side-stick">bastão lateral</button>
+            <button id="snare-drum">tarol</button>
+            <button id="bass-drum">bumbo</button>
+        </dialog>
+        <button id="recordAudio" title="Gravar áudio">🎙️</button>
+        <dialog id="recordAudioDialog">
+            <button id="closeRecordAudioDialog">Fechar</button>
+            <h1>Gravar Audio</h1>
+            <div id="recordAudioDialogBtnsDiv">
+                <button id="record" style="background: #21ebbf; color: black; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer;">🎙️ Gravar</button>
+                <button id="stopRecord" disabled style="background: #ff4d4d; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: not-allowed; opacity: 0.5;">⏹️ Parar</button>
+            </div>
+        </dialog>
+        <dialog id="SaveMyAudio">
+            <button id="closeSaveDialog">Voltar</button>
+            <br>
+            <h1>Salvar Meu Áudio</h1>
+            <p>Nome do áudio (sem .wav)</p>
+            <br>
+            <input id="archiveName" type="text" value="my_audio">
+            <br><br>
+            <button id="saveAudioBtn">Salvar</button>
+        </dialog>
+        <dialog id="savingAudio" style="background-color: black;">
+            <video src="PincherAudio - Saving Audio.mp4" autoplay playsinline muted loop style="height: 100%; width: 100%;"></video>
+        </dialog>
+
+        <dialog id="alertDialog"></dialog>
+    </div>
+
+    <div id="TrackDiv"></div>
+
+    <div id="Toolbar2">
+        <button id="playAndStopAllBtn">▶️</button>
+        <button id="addTrackBtn">➕</button>
+    </div>
+
+    <div id="tool">
+        <button title="Salvar meu audio em WAV" id="Export" style="position: absolute; right: 0%; top: 0%;">🔊</button>
+    </div>
+
+    <div id="main_loading" style="display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: white; z-index: 9999;">
+        <video loop autoplay muted playsinline src="../../../../assets/Pincher Studio - loading logo.mp4" style="width: 50%; max-width: 250px; height: auto;">
+        </video>
+    </div>
+
+    <script src="./PincherAudio.js"></script>
+</body>
+</html>

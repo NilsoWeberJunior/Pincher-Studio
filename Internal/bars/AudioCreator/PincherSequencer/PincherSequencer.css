@@ -1,0 +1,198 @@
+#PincherSequencerIcon {
+    position: absolute; 
+    top: 1px;
+    left: 1px;
+    z-index: 10;
+}
+
+#PincherSequencerIcon img {
+    width: 5vh;
+    height: 5vh;
+    min-width: 40px; 
+    min-height: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(0, 102, 255);
+    color: white;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    overflow: hidden;         
+}
+
+#configBtn {
+    position: absolute;
+    width: 80%;  
+    height: 80%; 
+    padding: 0;   
+    border: none; 
+    background: transparent; 
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out;
+    
+}
+
+#Toolbar {
+    position: absolute;
+    width: 50%;  
+    height: 50px;
+    padding: 0;   
+    border: none; 
+    background: rgb(5, 156, 0); 
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15%;
+    border: 10px solid #1a1a1a;
+}
+
+#Toolbar2 {
+    bottom: 10%;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    border: black solid 1px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px; 
+    
+    width: auto; 
+    
+    padding: 5px 15px; 
+
+    height: 5vh;
+}
+
+#Toolbar2 button {
+    background-color: transparent;
+    border: transparent;
+    font-size: 15px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#configDialog {
+    border: 5px solid #ffae00;
+    background-color: #0400ff;
+    border-radius: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#configDialog button {
+    border-radius: 50px;
+    color: #21ebbf;
+    background-color: #1a1a1a;
+}
+
+#configBtn:hover {
+    transform: scale(1.3);
+}
+
+#configBtn:active {
+    transform: scale(0.50);
+}
+
+@media (max-width: 768px) {
+    #Toolbar2 {
+        width: 90%;
+        box-sizing: border-box;
+        gap: 15px;
+        padding: 10px 15px;
+    }
+    #Toolbar2 button {
+        background-color: transparent;
+        border: transparent;
+        font-size: 15px;
+    }
+}
+
+#configBtn img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+
+.sequencer-container {
+    width: 95%;
+    max-width: 750px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    
+    
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.instrument-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-right: 5px;
+}
+
+#grid {
+    display: grid;
+    gap: 6px;
+    min-width: max-content; 
+    margin-bottom: 15px;
+    
+    justify-content: start; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+
+.cell.active[data-tom="normal"] {
+    background-color: #21ebbf;
+    box-shadow: 0 0 8px #21ebbf;
+    border-color: #fff;
+}
+
+.cell.active[data-tom="agudo"] {
+    background-color: #00bfff;
+    box-shadow: 0 0 8px #00bfff;
+    border-color: #fff;
+}
+
+.cell.active[data-tom="grave"] {
+    background-color: #ff4d4d;
+    box-shadow: 0 0 8px #ff4d4d;
+    border-color: #fff;
+}

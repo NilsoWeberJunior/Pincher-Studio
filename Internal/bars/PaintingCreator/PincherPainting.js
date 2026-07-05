@@ -13,8 +13,7 @@ setTimeout(function() {
     if (loading) loading.remove();
     
     document.getElementById("MainMenu").style.display = "block";
-    document.body.style.background = "green";
-
+        document.body.style.background = "linear-gradient(135deg, #00ffff 20%, #ffcc3e 70%) fixed"
     adjustCanvasSize();
 }, 1500);
 

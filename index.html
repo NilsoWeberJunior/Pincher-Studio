@@ -7,25 +7,42 @@
     <link href="index.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/Pincher Studio Logo.png">
 </head>
-<body style="background: green; margin: 0; padding: 0; min-height: 100vh; width: 100vw; position: relative; overflow: hidden;">
-
+<body>
     <div id="MainMenu" style="display: none;">
         <div id="OptionsMenu">
-            <h2 style="justify-self: center;">Bem Vindo ao Pincher Studio</h2>
-            <h3 style="justify-self: center;">O que você deseja fazer hoje?</h3>
-            <div id="OptionsMenuButtons" style="justify-self: center;">
-                <p>Animação</p>
-                <a title="criar nova animação" href="Internal/bars/AnimationCreator/PincherAnim.html" style="position: relative; display: inline;">
-                    <img src="assets/CreateNewAnimationButtonIMG.png">
-                </a>
-                <p>desenho</p>
-                <a title="criar nova pintura" href="Internal/bars/PaintingCreator/PincherPainting.html" style="position: relative; display: inline; justify-self: center;">
-                    <img src="assets/CreateNewPaintingButtonIMG.png">
-                </a>
-                <p>audio</p>
-                <a title="criar novo audio" href="Internal/bars/AudioCreator/PincherAudio.html" style="position: relative; display: inline;">
-                   <img src="assets/CreateNewAudioButtonIMG.png">
-                </a>
+            <h2 id="bemVindo">Olá! Seja bem-vindo ao:</h1>
+            <h1 id="bemVindo2">Pincher Studio</h1>
+            <h3 id="começarCriar">está pronto para começar a criar?</h3>
+            <div id="apps">
+                <h3 class="partName">Video 📽️</h3>
+                <div id="video" class="part">
+                    <div id="PincherAnim" class="partItems">
+                        <a title="Pincher Anim - Animation Maker" href="Internal/bars/AnimationCreator/PincherAnim.html">
+                            <img src="Internal/bars/AnimationCreator/Pincher Anim - Logo.png">
+                        </a>
+                    </div>
+                </div>
+                <h3 class="partName">Audio 🔊</h3>
+                <div id="audio" class="part">
+                    <div id="PincherAudio" class="partItems">
+                        <a title="Pincher Audio - Audio Maker" href="Internal/bars/AudioCreator/PincherAudio/PincherAudio.html">
+                            <img src="Internal/bars/AudioCreator/PincherAudio/Pincher Audio Logo.png">
+                        </a>
+                    </div>
+                    <div id="PincherSequencer" class="partItems">
+                        <a title="Pincher Sequencer - Song Maker" href="Internal/bars/AudioCreator/PincherSequencer/PincherSequencer.html">
+                            <img src="Internal/bars/AudioCreator/PincherSequencer/Pincher Sequencer Logo.png">
+                        </a>
+                    </div>
+                </div>
+                <h3 class="partName">Imagem 🖼️</h3>
+                <div id="image" class="part">
+                    <div id="PincherPainting" class="partItems">
+                        <a title="Pincher Painting - Painting Maker" href="Internal/bars/PaintingCreator/PincherPainting.html">
+                            <img src="Internal/bars/PaintingCreator/Pincher Painting Logo.png">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="PincherStudioIcons">

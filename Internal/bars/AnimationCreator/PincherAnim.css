@@ -44,7 +44,7 @@
 }
 
 #Toolbar2 {
-    bottom: 50px;
+    bottom: 10%;
     position: absolute;
     justify-self: center;
     display: flex;
@@ -61,69 +61,9 @@
     height: 5vh;
 }
 
-#pencil img {
-    width: 10px;
-    height: 3vh;
-
-}
-
-#rubber img {
-    width: 10px;
-    height: 3vh;
-
-}
-
-#config img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#circleBtn img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#triangleBtn img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#squareBtn img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#lineBtn img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#textBtn img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#forms img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#undo img {
-    width: 15px;
-    height: 3vh;
-
-}
-
-#redo img {
-    width: 15px;
-    height: 3vh;
-
+#Toolbar button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
